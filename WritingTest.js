@@ -37,7 +37,7 @@ class WritingTest {
       if(englishInput.includes(word.english) == false) {
         console.log('\nRespuesta: '.bold + 'Incorrecta'.bold.red);
         this.incorrectWordsCount++
-        this.errors.push('Spanish: '.bold + word.spanish + ' English: '.bold + word.english + ' Input: '.bold.red + englishInput);
+        this.errors.push('Spanish: '.bold + word.spanish + ' English: '.bold + word.english + word.ipa ' Input: '.bold.red + englishInput);
       } else {
         console.log('\nRespuesta: '.bold + 'Correcta'.bold.green);
         this.correctWordsCount++;

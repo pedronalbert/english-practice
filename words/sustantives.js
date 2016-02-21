@@ -44,7 +44,7 @@ module.exports = [{ english: "marvel", spanish: "maravilla", ipa: "/ˈmɑr vəl/
 { english: "crayon", spanish: "crayon", ipa: "/ˈkreɪ ɒn, -ən/" },
 { english: "peeler", spanish: "policía", ipa: "/ˈpi lər/" },
 { english: "mailman", spanish: "cartero", ipa: "/ˈmeɪlˌmæn/" },
-{ english: "boat", spanish: "barco", ipa: "/boʊt/" },
+{ english: "boat", spanish: "bote", ipa: "/boʊt/" },
 { english: "bat", spanish: "murciélago", ipa: "/bæt/" },
 { english: "comb", spanish: "peine", ipa: "/koʊm/" },
 { english: "island", spanish: "isla", ipa: "/ˈaɪ lənd/" },
