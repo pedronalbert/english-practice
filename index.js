@@ -2,7 +2,7 @@ var WritingTest = require('./src/WritingTest');
 var sget = require('sget');
 
 var initIndex = parseInt(sget('N° Palabra Inicial: ')) - 1;
-var finalIndex = parseInt(sget('N° Palabra Final: '));
+var finalIndex = parseInt(sget('N° Palabra Final: ')) - 1;
 
 var Test = new WritingTest('sustantives', initIndex, finalIndex);
 
