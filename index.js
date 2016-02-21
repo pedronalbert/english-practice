@@ -9,5 +9,5 @@ var Test = new WritingTest('sustantives', initIndex, finalIndex);
 do {
   Test.initTest();
 
-  var repeatTest = sget('\nRepetir el test [s/n]:');
-} while (repeatTest.includes('s'))
+  var repeatTest = sget('\nRepetir el test [s/n]:').slice(0, 1)
+} while (repeatTest == 's')
