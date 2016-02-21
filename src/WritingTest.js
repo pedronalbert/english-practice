@@ -20,6 +20,8 @@ class WritingTest {
 
 
   initTest () {
+    clear();
+    
     this.testWords = _.shuffle(this.testWords);
     this.correctWordsCount = 0;
     this.incorrectWordsCount = 0;

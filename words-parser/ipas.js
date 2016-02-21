@@ -1275,4 +1275,9 @@ module.exports = ["/ˈmɑr vəl/",
 "/ˈpeɪ mənt/",
 "/ˈsɜr vər/",
 "/ˈpɑrt nər/",
-"/ˈkreɪd l/"]
+"/ˈkreɪd l/",
+"/sliv/",
+"/ˈkrɒk ə ri/",
+"/ˈmaɪ kroʊˌweɪv/",
+"/ˈtoʊ stər/ ",
+"/hɒb/"];
