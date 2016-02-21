@@ -32,14 +32,14 @@ class WritingTest {
       this.printProgress();
 
       console.log('\nEspañol:'.cyan.bold);
-      console.log(word.spanish + '\n')
+      console.log(word.number + ' - ' + word.spanish + '\n')
 
       let englishInput = sget('English:'.cyan.bold);
 
       if(englishInput.includes(word.english) == false) {
         console.log('\nRespuesta: '.bold + 'Incorrecta'.bold.red);
         this.incorrectWordsCount++
-        this.errors.push('Spanish: '.bold + word.spanish + ' English: '.bold + word.english + word.ipa + ' Input: '.bold.red + englishInput);
+        this.errors.push(word.number + ' - Spanish: '.bold + word.spanish + ' English: '.bold + word.english + word.ipa + ' Input: '.bold.red + englishInput);
       } else {
         console.log('\nRespuesta: '.bold + 'Correcta'.bold.green);
         this.correctWordsCount++;

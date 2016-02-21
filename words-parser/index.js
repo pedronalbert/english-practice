@@ -5,7 +5,7 @@ var async = require('async');
 var fs = require('fs');
 
 async.forEachOf(SpanishWords, (word, index, next) => {
-  var text = '{ english: "' + EnglishWords[index] + '", spanish: "' + SpanishWords[index] + '", ipa: "' + Ipas[index] + '" },';
+  var text = '{ number: ' + (index+1) + ', english: "' + EnglishWords[index] + '", spanish: "' + SpanishWords[index] + '", ipa: "' + Ipas[index] + '" },';
 
   fs.appendFile('./results.txt', text + '\n');
   next()
