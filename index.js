@@ -2,6 +2,7 @@ var WritingTest = require('./src/WritingTest');
 var sget = require('sget');
 var clear = require('clear');
 
+clear();
 var test = createNewTest()
 test.initTest()
 
