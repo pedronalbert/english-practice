@@ -1,13 +1,31 @@
 var WritingTest = require('./src/WritingTest');
 var sget = require('sget');
+var clear = require('clear');
 
-var initIndex = parseInt(sget('N° Palabra Inicial: ')) - 1;
-var finalIndex = parseInt(sget('N° Palabra Final: '));
-
-var Test = new WritingTest('sustantives', initIndex, finalIndex);
+var test = createNewTest()
+test.initTest()
 
 do {
-  Test.initTest();
+  console.log('\nSeleccione una opcion: \n'.bold);
+  console.log('1) Repetir el mismo test');
+  console.log('2) Crear un nuevo test');
+  console.log('3) Salir');
 
-  var repeatTest = sget('\nRepetir el test [s/n]:').slice(0, 1)
-} while (repeatTest == 's')
+  var option = parseInt(sget('').slice(0, 1));
+
+  if(option == 1) {
+    test.initTest();
+  } else if (option == 2) {
+    clear()
+    test = createNewTest();
+    test.initTest()
+  }
+} while (option != 3);
+
+function createNewTest () {
+  var initIndex = parseInt(sget('N° Palabra Inicial: ')) - 1;
+  var finalIndex = parseInt(sget('N° Palabra Final: '));
+
+  var test = new WritingTest('sustantives', initIndex, finalIndex);
+  return test;
+}
