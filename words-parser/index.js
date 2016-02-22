@@ -7,8 +7,9 @@ var fs = require('fs');
 async.forEachOf(SpanishWords, (word, index, next) => {
   var text = '{ number: ' + (index+1) + ', english: "' + EnglishWords[index] + '", spanish: "' + SpanishWords[index] + '", ipa: "' + Ipas[index] + '" },';
 
-  fs.appendFile('./results.txt', text + '\n');
-  next()
+  fs.appendFile('./results.txt', text + '\n', () => {
+    next()
+  });
 }, function done() {
   console.log('Finished!');
 });

@@ -9,12 +9,9 @@ var _ = require('lodash');
 class WritingTest {
   constructor(testWordsType, initIndex, finalIndex) {
     this.testWordsType = testWordsType;
-    initIndex = initIndex || 0; 
 
     if (testWordsType == 'sustantives') {
-      finalIndex = finalIndex == -1 ? SustantivesDB.length -1 : finalIndex
-
-      this.testWords = SustantivesDB.slice(initIndex, finalIndex);
+      this.testWords = _.slice(SustantivesDB, initIndex, finalIndex)
     }
   }
 
@@ -34,15 +31,15 @@ class WritingTest {
       console.log('\nEspañol:'.cyan.bold);
       console.log(word.number + ' - ' + word.spanish + '\n')
 
-      let englishInput = sget('English:'.cyan.bold);
+      let englishInput = sget('English:'.cyan.bold).slice(0,-2);
 
-      if(englishInput.includes(word.english) == false) {
+      if(englishInput === word.english) {
+        console.log('\nRespuesta: '.bold + 'Correcta'.bold.green);
+        this.correctWordsCount++;
+      } else {
         console.log('\nRespuesta: '.bold + 'Incorrecta'.bold.red);
         this.incorrectWordsCount++
         this.errors.push(word.number + ' - Spanish: '.bold + word.spanish + ' English: '.bold + word.english + word.ipa + ' Input: '.bold.red + englishInput);
-      } else {
-        console.log('\nRespuesta: '.bold + 'Correcta'.bold.green);
-        this.correctWordsCount++;
       }
 
       console.log('Word: '.bold + word.english + ' ' + word.ipa);
